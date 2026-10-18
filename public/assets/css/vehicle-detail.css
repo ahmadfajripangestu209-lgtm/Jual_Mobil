@@ -1,0 +1,272 @@
+/* Ukuran standar foto kendaraan di kartu katalog. */
+.car-image {
+    height: auto;
+    aspect-ratio: 16 / 10;
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--blue);
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.details-cta:hover {
+    color: #9b7e1b;
+}
+
+.vehicle-detail-page {
+    min-height: 65vh;
+    padding: 28px 0 72px;
+    background: var(--paper);
+}
+
+.detail-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0 0 20px;
+    color: #8490a0;
+    font-size: 10px;
+}
+
+.detail-breadcrumb a:hover {
+    color: #9b7e1b;
+}
+
+.detail-breadcrumb strong {
+    overflow: hidden;
+    color: var(--navy);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.vehicle-detail-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(310px, .85fr);
+    align-items: start;
+    gap: 26px;
+}
+
+.vehicle-gallery,
+.vehicle-detail-info {
+    min-width: 0;
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 5px 18px rgba(11, 25, 44, .035);
+}
+
+.vehicle-gallery {
+    position: relative;
+    padding: 15px;
+}
+
+.vehicle-main-photo {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    max-height: 470px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #edf0f3;
+}
+
+.vehicle-main-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.vehicle-thumbnails {
+    display: flex;
+    gap: 9px;
+    overflow-x: auto;
+    padding: 12px 1px 2px;
+}
+
+.vehicle-thumbnail {
+    flex: 0 0 104px;
+    width: 104px;
+    height: 66px;
+    padding: 0;
+    overflow: hidden;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: #edf0f3;
+    cursor: pointer;
+}
+
+.vehicle-thumbnail.selected {
+    border-color: var(--gold);
+}
+
+.vehicle-thumbnail img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-counter {
+    display: block;
+    margin-top: 10px;
+    color: #909baa;
+    font-size: 9px;
+}
+
+.vehicle-detail-info {
+    padding: 27px;
+}
+
+.vehicle-detail-info h1 {
+    margin: 9px 0;
+    color: var(--navy);
+    font-size: clamp(24px, 3vw, 34px);
+    line-height: 1.18;
+    letter-spacing: -.05em;
+}
+
+.vehicle-detail-price {
+    margin: 14px 0 18px;
+    color: #957713;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -.04em;
+}
+
+.vehicle-detail-specs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 14px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.vehicle-detail-specs > div {
+    min-width: 0;
+    padding: 12px 0;
+    display: grid;
+    gap: 5px;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.vehicle-detail-specs > div:nth-last-child(-n+2) {
+    border-bottom: 0;
+}
+
+.vehicle-detail-specs small {
+    color: #929daa;
+    font-size: 9px;
+}
+
+.vehicle-detail-specs strong {
+    overflow-wrap: anywhere;
+    color: #34445a;
+    font-size: 10px;
+}
+
+.vehicle-description {
+    margin: 19px 0;
+}
+
+.vehicle-description h2 {
+    margin: 0 0 8px;
+    color: var(--navy);
+    font-size: 13px;
+}
+
+.vehicle-description p {
+    margin: 0;
+    color: #758194;
+    font-size: 10px;
+    line-height: 1.8;
+    white-space: pre-line;
+}
+
+.vehicle-contact {
+    width: 100%;
+    margin-top: 2px;
+    font-size: 10px;
+}
+
+.whatsapp-icon {
+    width: 16px;
+    height: 16px;
+    fill: #25d366;
+}
+
+.detail-back-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: #748195;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.detail-back-link:hover {
+    color: #947615;
+}
+
+.vehicle-detail-page + .site-footer .footer-bottom {
+    align-items: center;
+}
+
+.vehicle-detail-page + .site-footer .footer-bottom a {
+    color: #b8c4d2;
+}
+
+.vehicle-detail-page + .site-footer .footer-bottom a:hover {
+    color: var(--gold-light);
+}
+
+@media (max-width: 800px) {
+    .vehicle-detail-layout {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .vehicle-detail-info {
+        padding: 22px;
+    }
+
+    .vehicle-detail-page {
+        padding: 21px 0 48px;
+    }
+
+    .vehicle-main-photo {
+        max-height: 420px;
+    }
+}
+
+@media (max-width: 700px) {
+    .vehicle-gallery {
+        padding: 10px;
+    }
+
+    .vehicle-thumbnail {
+        flex-basis: 82px;
+        width: 82px;
+        height: 54px;
+    }
+
+    .vehicle-detail-info {
+        padding: 19px;
+    }
+
+    .vehicle-detail-price {
+        font-size: 21px;
+    }
+
+    .detail-breadcrumb {
+        font-size: 9px;
+    }
+}

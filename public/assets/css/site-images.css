@@ -1,0 +1,11 @@
+.hero.has-custom-image:before {
+    background-image:
+        linear-gradient(90deg, var(--navy) 0%, rgba(11, 25, 44, .78) 19%, rgba(11, 25, 44, .12) 100%),
+        var(--hero-image);
+}
+
+.about-art.has-custom-image {
+    background-image:
+        linear-gradient(180deg, rgba(11, 25, 44, .03), rgba(11, 25, 44, .2)),
+        var(--about-image);
+}
